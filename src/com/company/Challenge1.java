@@ -20,6 +20,10 @@ public class Challenge1 {
                     System.out.print("Rizz");
                 }
 
+                if(i%11==0) {
+                    System.out.print("Jazz");
+                }
+
                 System.out.print(" , ");
             }
         }
