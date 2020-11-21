@@ -28,6 +28,7 @@ public class Challenge2_1 {
 
             if (d == '7')
                 str = str + "Qix";
+
         }
 
         if (str.isEmpty())

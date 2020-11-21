@@ -38,16 +38,25 @@ public class Challenge4 {
 
         while (arr.length>1) {
             for(int j=1; j<arr.length; j++) {
-                for(int k=2; k<arr.length; k++){
-                    int sum = arr[0] + arr[j] + arr[k];
-                    if(sum==0) {
-                        arr=deleteAtIndex(arr, 0);
-                        arr=deleteAtIndex(arr, j-1);
-                        arr=deleteAtIndex(arr, k-2);
+                if (perechi==true) {
+                    break;
+                }
 
-                        contor++;
-                        perechi=true;
-                        break;
+                for(int k=2; k<arr.length; k++){
+                    if (k==j) {
+                        continue;
+                    }
+                    else {
+                        int sum = arr[0] + arr[j] + arr[k];
+                        if(sum==0) {
+                            arr=deleteAtIndex(arr, 0);
+                            arr=deleteAtIndex(arr, j-1);
+                            arr=deleteAtIndex(arr, k-2);
+
+                            contor++;
+                            perechi=true;
+                            break;
+                        }
                     }
                 }
             }
